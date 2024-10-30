@@ -4,8 +4,8 @@ export default class GetProductUsecase {
     }
 
     async execute(input) {
-        this.gateway.logInfo(`Retrieving product data in a 2km radius.`);
-        const radius = 2;
+        this.gateway.logInfo(`Retrieving product data in a 7km radius.`);
+        const radius = 7;
         const criteria = {
             ...input,
             radius
