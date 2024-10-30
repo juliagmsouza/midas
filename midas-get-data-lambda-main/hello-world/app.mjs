@@ -9,7 +9,7 @@ app.use(express.json());
 const port = 3000
 
 app.post('/', async (req, res) => {
-    const { lat, lng, name } = req.body;
+    const {coord, name } = req.body;
 
     // Repositories
     const productRepository = new ProductRepository({ client });
@@ -24,7 +24,7 @@ app.post('/', async (req, res) => {
     const getProductUsecase = new GetProductUsecase({ gateway: getProductGateway })
 
     // Execução
-    const productsList = await getProductUsecase.execute({ lat, lng, name });
+    const productsList = await getProductUsecase.execute({ lat: coord[0], lng: coord[1], name });
     res.json({ list: productsList });
 })
 
