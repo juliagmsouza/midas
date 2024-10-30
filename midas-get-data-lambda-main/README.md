@@ -1,1 +1,1 @@
-
+Criação de uma Lambda onde é possível recuperar os dados dos produtos. A Lambda recebe o nome do produto (string) e a lat e longitude (array). O retorno é o produto pesquisado nos supermercados em um raio de 7km.
